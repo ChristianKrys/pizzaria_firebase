@@ -1,0 +1,43 @@
+
+
+
+<div class="card my-3">
+    <div class="card-header bg-info h3 fst-bold">Commande Pizza</div>
+    <div class="card-body">
+        <form  novalidate class="form-group" [formGroup]="pizzaForm">
+            <div class="row form-group mb-3">
+                <label for="nomClient" class="label-control">Nom du Client : </label>
+                <input type="text" class="form-control" formControlName="nomClient" id="nomClient" placeholder="Nom de l'pizza">                               
+            </div>
+            <div class="row form-group mb-3">
+                <label for="numeroCommande" class="label-control">Numero de commande : </label>
+                <input type="text" class="form-control" formControlName="numeroCommande" id="numeroCommande" placeholder="Prix">                              
+            </div>
+            <div class="row form-group mb-3">
+                <div class="d-flex flex-wrap">
+                    <button type="button" class="btn btn-info py-1 px-4 m-1" *ngFor="let pizza of pizzas" (click)="addPizza(pizza)">
+                        {{pizza}}
+                    </button>
+                </div>
+
+            </div>
+            <div class="row form-group mb-3">
+                <ul>
+                    <div *ngFor="let pizza of commandePizzas">
+                        <li class="d-flex justify-between border-bottom-1">
+                            <span class="me-auto">{{pizza}}</span>
+                            <div class="btn btn-outline-danger px-2 my-1" (click)="removePizza(pizza)">x</div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="row form-group mb-3">
+                <button class="btn btn-success" type="button" (click)="onSubmit()">Commander</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+ 

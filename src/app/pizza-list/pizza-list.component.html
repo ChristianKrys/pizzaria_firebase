@@ -1,0 +1,67 @@
+
+
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">No Commande</th>
+            <th scope="col">Nom Client</th>
+            <th scope="col">Liste des pizzas</th>
+            <th scope="col" colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let commande of commandePizzas">
+            <td>{{commande.data.numeroCommande}}</td>
+            <td>{{commande.data.nomClient}}</td>
+            <td>
+                <div *ngFor="let pizza of commande.data.commandePizzas">{{pizza}}</div>
+            </td>
+            <td [hidden]="commande.data.livree" (click)="markDelivred(commande)"><div class="btn">Mark</div></td>
+            <td [hidden]="commande.data.livree" (click)="deletePizza(commande.id)"><div class="btn">Supp</div></td>
+        </tr>
+    </tbody>
+</table> -->
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">No Commande</th>
+            <th scope="col">Nom Client</th>
+            <th scope="col">Liste des pizzas</th>
+            <th scope="col" colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let commande of commandesPizzaWithIds$|async">
+            <td>{{commande.numeroCommande}}</td>
+            <td>{{commande.nomClient}}</td>
+            <td>
+                <div *ngFor="let pizza of commande.commandePizzas">{{pizza}}</div>
+            </td>
+            <td [hidden]="commande.livree" (click)="markDelivred(commande)"><div class="btn">Mark</div></td>
+            <td [hidden]="commande.livree" (click)="deletePizza(commande.id)"><div class="btn">Supp</div></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div *ngIf="imageUrl">
+    <img [src]="imageUrl" alt="image" width="25%">
+</div>
+<input type="file" (change)="onFileChange($event)">
+<button type="button"  (click)="deleteImageFromStorage()">delete</button>
+
+
+
+
+
+
+<!-- <pre *ngIf="commandesPizzaWithIds$|async as comm">
+    {{comm|json}}
+</pre> -->
+
+
+
+

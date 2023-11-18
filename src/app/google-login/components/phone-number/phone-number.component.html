@@ -1,0 +1,39 @@
+
+
+    <div class="row">
+        <div class="card shadow">
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <h4 class="text-dark text-muted">Login by Phone Number</h4>
+                    </div>
+                    <div class="row">
+                        <div class="form-group mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" name="phoneNumber" [(ngModel)]="phoneNumber">
+                        </div>
+                        <div id="recaptcha-container"></div>
+                        <button type="button" class="btn btn-info">Send OTP</button>
+                        <hr>
+                        <div class="form-group mb-3">
+                            <label for="otp" class="form-label">OTP</label>
+                            <input type="text" class="form-control" name="otp" [(ngModel)]="otp">
+                        </div>
+                        <button type="button" class="btn btn-info mb-3 me-3">Verify</button>
+                        <button type="button" class="btn btn-info mb-3">Cancel</button>
+                        <div class="d-flex align-items-center justify-content-center">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="/login/register" style="text-decoration: none;">Need Account ? <span
+                                    class="text-danger">Register</span> </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+

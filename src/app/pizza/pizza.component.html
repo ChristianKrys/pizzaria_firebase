@@ -1,0 +1,93 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class= "alert alert-danger text-center d-flex align-items-center mt-3" *ngIf="errorMessage">
+    <span class="material-icons" >error</span>
+    <span class="flex-grow-1">{{errorMessage}}</span>
+    <span class="material-icons rounded-circle _close" (click)="closeErrorMessage()" >close</span>
+</div>
+<div class="card my-3">
+    <div class="card-header bg-info h3 fst-bold">Form edition</div>
+    <div class="card-body">
+        <form  novalidate class="form-group" [formGroup]="pizzaForm" (ngSubmit)="sendForm()">
+            <div class="row form-group">
+                <div class="col-md-8">
+                    <div class="row form-group mb-3">
+                        <div class="col-md-2">
+                            <label for="pizzaName" class="label-control">Nom : </label>
+                        </div> 
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" formControlName="pizzaName" id="pizzaName" placeholder="Nom de l'pizza">
+                        </div>                               
+                    </div>
+                    <div class="row form-group mb-3">
+                        <div class="col-md-2">
+                            <label for="pizzaPrice" class="label-control">Prix : </label>
+                        </div> 
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" formControlName="pizzaPrice" id="pizzaPrice" placeholder="Prix"
+                                [ngClass]="{'is-invalid' : pizzaPriceError}"
+                            >
+                            <span class="invalid-feedback">{{pizzaPriceError}}</span>
+                        </div>                               
+                    </div>
+                    <div class="row form-group mb-1">
+                        <div class="col-md-2">
+                            <label for="pizzaDescription" class="label-control">pizzaDescription : </label>
+                        </div> 
+                        <div class="col-md-10">
+                            <textarea class="form-control" formControlName="pizzaDescription" id="pizzaDescription" cols="30" rows="5"></textarea>
+                        </div>                               
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 form-group d-flex flex-column">
+                    <img [src]="setDefaultImage()" class="img-fluid rounded mb-3" [title]="pizzaForm.value.pizzaName" [alt]="pizzaForm.value.pizzaName">
+                    <input type="file" class="form-control" (change)="handleChange($event)">
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="offset-md-2 col-md-8 d-flex mt-3">
+                    <button type="submit" class="btn btn-info me-3 d-flex" (click)="savepizza()"  > 
+                        <div class="spinner-border" role="status" *ngIf="loading">
+                            <span class="visually-hidden pe-1">Loading...</span>
+                        </div>
+                        Enregistrer
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary me-3" (click)="pizzaForm.reset()">Annuler</button>
+                    <button type="button" class="btn btn-outline-danger" (click)="supprimerpizza()">Supprimer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+ -->
